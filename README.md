@@ -6,90 +6,51 @@ Created to understand how routing, middleware, and response handling work intern
 ✨ Features
 
 Custom Router (GET & POST)
-
 Middleware Support (app.use)
-
 JSON & URL-encoded Body Parser
 
 Extended Response Methods:
-
 res.json()
-
 res.status()
-
 res.send()
 
 Centralized Error Handling
-
 Example Apps Included
 
-📁 Structure
-bodyParser.js
-calculatorApp.js
-errorHandler.js
-exampleApp.js
-index.js
-middleware.js
-response.js
-router.js
-server.js
-package.json
+📁 Project Structure
 
-▶ Run the Project
+mininode-framework/
+│
+├── bodyParser.js
+├── calculatorApp.js
+├── errorHandler.js
+├── exampleApp.js
+├── index.js
+├── middleware.js
+├── response.js
+├── router.js
+├── server.js
+└── package.json
+
+
+▶️ Steps to Run the Project
+
+Step 1: Clone the repository using
+git clone https://github.com/shivsingh2005/MiniFramework
+
+Step 2: Navigate into the project folder
+cd mininode-framework
+
+Step 3: (Optional) Install dependencies
+npm install
+
+Step 4: Start the server by running either
 node exampleApp.js
-
-
 or
-
 node calculatorApp.js
 
-
-Server runs at:
-
+Step 5: Open your browser and visit
 http://localhost:3000
-
-🛠 Basic Usage
-const createApp = require("./index");
-const app = createApp();
-
-// Middleware
-app.use((req, res, next) => {
-  console.log(req.method, req.url);
-  next();
-});
-
-// Route
-app.get("/", (req, res) => {
-  res.json({ message: "Hello World" });
-});
-
-// Start Server
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
-});
-
-🧮 Example API
-
-GET:
-
-/add?a=5&b=10
+to test the application and API endpoints. 🚀
 
 
-POST:
-
-POST /calculate
-Body: { "a": 10, "b": 5, "op": "add" }
-
-🎯 Purpose
-
-Built for learning:
-
-Backend fundamentals
-
-Middleware chaining
-
-Routing logic
-
-HTTP server internals
-
-Author: Shiv Singh
